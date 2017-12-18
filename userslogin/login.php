@@ -91,7 +91,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <body>
     <div class="dis">
 	<center>
-        <h2>Login</h2>
+        <h2>Login
+            </h2>
         <h3>Please fill in your credentials to login.</h3>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div "<?php echo (!empty($studentid_u)) ? 'has-error' : ''; ?>">
