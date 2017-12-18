@@ -49,6 +49,7 @@ if(isset($_POST['addbook'])){
     <h3>University of Southeastern Philippines</h3>
     </center>
     <div id="main">
+    
 	<h2 align="center">ADD New Borrowed Books</h2>  <br><br><br>  
         <div>
         
@@ -88,7 +89,8 @@ if(isset($_POST['addbook'])){
 				</form>  
                 <center>
                 <a href="../listofbooks/userslogin/login.php"><input type="submit" value="Log Out" ></a>
-                    <a href="../listofbooks/showtables.php"><input type="submit" value="Show Borrowed Books"></a>
+                    <a href="../listofbooks/showtables.php"><input type="submit" value="Show Borrowed Books"></a><br>
+                    <a href="../listofbooks/userslogin/profile.php"><input type="submit" value="Profile"></a>
                 </center>
 	</div>
 	

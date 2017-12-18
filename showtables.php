@@ -38,7 +38,10 @@ tr:hover {background-color: #b3b3b3}
 
     <h3>University of Southeastern Philippines</h3><br>
     <h3>Books Added
-        <right><a href="../listofbooks/userslogin/login.php"><input type="submit" value="Back" ></a></h3></h3>
+        <right><a href="../listofbooks/create.php"><input type="submit" value="Back" ></a>
+            <a href="../listofbooks/userslogin/login.php"><input type="submit" value="Log out" ></a></right>
+            </h3></h3>
+      
    
     </center>
     </body>
