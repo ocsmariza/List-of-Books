@@ -30,7 +30,6 @@ if(isset($_POST['addbook'])){
 <html lang ="en">
 <head>
     <title>Add New Borrowed</title>
-    <link rel="stylesheet" href="../CSS/mycss.css">
     <style>
       input[type=text]{
            
@@ -88,7 +87,7 @@ if(isset($_POST['addbook'])){
                 </center>
 				</form>  
                 <center>
-                <a href="../listofbooks/main/options.php"><input type="submit" value="Log Out" ></a>
+                <a href="../listofbooks/main/INDEX.php"><input type="submit" value="Log Out" ></a>
                     <a href="../listofbooks/userprofile.php"><input type="submit" value="Profile"></a>
                 </center>
 	</div>

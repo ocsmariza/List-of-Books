@@ -40,7 +40,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
 <html lang="en">
 <head>
     <title>Add New Borrowed</title>
-    <link rel="stylesheet" href="../CSS/mycss.css">
+  
     
 </head>
 <body>	

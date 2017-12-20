@@ -2,9 +2,7 @@
 <!DOCTYPE html>
 <html lang ="en">
 <head>
-    <title>Add New Borrowed</title>
-    <link rel="stylesheet" href="mycss.css">
-    
+    <title>Add New Borrowed</title>  
         <style>
 table {
     border-collapse: collapse;
