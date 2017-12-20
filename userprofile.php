@@ -5,6 +5,7 @@
          <title>Add New Borrowed</title>
     <link rel="stylesheet" href="../CSS/mycss.css">
     </head>
+    <center>
      <img src="photos/usep.png" height=100 width=100  class="left">  
 
     <h3>University of Southeastern Philippines</h3>

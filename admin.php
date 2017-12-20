@@ -3,7 +3,7 @@
 <html lang ="en">
 <head>
     <title>Add New Borrowed</title>
-    <link rel="stylesheet" href="../CSS/mycss.css">
+    <link rel="stylesheet" href="mycss.css">
     
         <style>
 table {
@@ -37,13 +37,11 @@ tr:hover {background-color: #b3b3b3}
  <img src="photos/usep.png" height=100 width=100  class="left">  
 
     <h3>University of Southeastern Philippines</h3><br>
-    <h3>Books Added
-        <right><a href="../listofbooks/create.php"><input type="submit" value="Back" ></a>
-            <a href="../listofbooks/main/login.php"><input type="submit" value="Log out" ></a></right>
+    <h3>Books Added<br>
+            <a href="../listofbooks/main/options.php"><input type="submit" value="Log out" ></a></right>
             </h3></h3>
-      
-   
-    </center>
+    <input type="text" id="myInput" onkeyup="searchTable()" placeholder="Search Complaints .." title="Type in a name">
+ </center>
     </body>
     
 </html>
@@ -59,9 +57,9 @@ mysqli_close($con);
     
 ?>
 <br><br><br>
-<table>
+<table id="myTable">
 <thread>
-    <tr>
+    <tr id="tableHeader">
     <th>ID</th>
     <th>College</th>
     <th>Books Name</th>
@@ -88,5 +86,29 @@ mysqli_close($con);
     
     </tbody>
 </table>
+<script>
+function searchTable() {
+    var input, filter, found, table, tr, td, i, j;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td");
+        for (j = 0; j < td.length; j++) {
+            if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                found = true;
+            }
+        }
+        if (found) {
+            tr[i].style.display = "";
+            found = false;
+        } else {
+            if (tr[i].id != 'tableHeader'){tr[i].style.display = "none";}
+        }
+    }
+}
+</script>
+
 
         

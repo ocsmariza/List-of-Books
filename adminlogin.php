@@ -54,8 +54,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Log In</title>
-    <link rel="stylesheet" href="../mycss.css">
+    <title>Admin</title>
+    <link rel="stylesheet" href="mycss.css">
     
 	<style>
       div{
@@ -70,7 +70,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
 	input[type=submit]{
     width: 35%;
-    background-color: #00a3cc;
+    background-color: #660000;
     color: white;
     padding: 10px;
     margin: 8px ;
@@ -85,18 +85,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
  <img src="photos/usep.png" height=100 width=100  class="left">  
 
     <h3>University of Southeastern Philippines</h3>
-    </center>
     
+      <a href="../listofbooks/main/login.php">Student</a>
+        <div class="dropdown" style="float:center"></div>
+    
+    </center>
 </head>
 <body>
     <div class="dis">
 	<center>
-        <h2>Login
+        <h2>Admin
             </h2>
-        <h3>Please fill in your credentials to login.</h3>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div "<?php echo (!empty($adminid_u)) ? 'has-error' : ''; ?>">
-                <label><h4>Admin ID:<sup>*</sup></h4></label><br>
                 <input type="text" name="adminid" value="<?php echo $adminid; ?>">
                 <span><?php echo $adminid_u; ?></span>
             </div>

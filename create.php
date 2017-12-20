@@ -88,8 +88,8 @@ if(isset($_POST['addbook'])){
                 </center>
 				</form>  
                 <center>
-                <a href="../listofbooks/userslogin/login.php"><input type="submit" value="Log Out" ></a>
-                    <a href="../listofbooks/userslogin/profile.php"><input type="submit" value="Profile"></a>
+                <a href="../listofbooks/main/options.php"><input type="submit" value="Log Out" ></a>
+                    <a href="../listofbooks/userprofile.php"><input type="submit" value="Profile"></a>
                 </center>
 	</div>
 	
