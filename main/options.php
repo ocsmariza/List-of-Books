@@ -6,23 +6,23 @@
         <style>
     
             
-            
-            div{
+        div{
                 border-style: solid;
-               border-color: #990000;
+               border-color: #660000;
+                
             }
             .title{
-                 background-color: #990000;
+                 background-color: #660000;
             }
             .footer{
-                background-color: #990000;
+                background-color: #660000;
             }
 	input[type=submit]{
     width: 15%;
-    background-color: #990000;
+    background-color: #660000;
     font-size: 20px;
     color: white;
-    padding: 25px;
+    padding: 26px;
     cursor: pointer;
 }
 
@@ -34,7 +34,7 @@
     <div class="header">
         <div class="title">
         <img src="../photos/usep.png" height=100 width=100  class="left">  
-        <h1>University of Southeastern Philippines</h1> 
+        <h1 style="color:white">University of Southeastern Philippines</h1> 
     </div>
         <br><br><br><br>
         <form action="../adminlogin.php" method="get">

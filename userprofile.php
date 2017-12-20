@@ -11,4 +11,8 @@
     <h3>University of Southeastern Philippines</h3>
    
         </center>
+    <center>
+                <a href="../listofbooks/main/options.php"><input type="submit" value="Log Out" ></a>
+                    <a href="../listofbooks/create.php"><input type="submit" value="back"></a>
+                </center>
 </html>

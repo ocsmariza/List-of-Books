@@ -84,7 +84,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     
  <img src="../photos/usep.png" height=100 width=100  class="left">  
 
-    <h3>University of Southeastern Philippines</h3>
+    <h3 style="color:white">University of Southeastern Philippines</h3>
     
     
     <div class="menus">
