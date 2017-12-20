@@ -89,7 +89,6 @@ if(isset($_POST['addbook'])){
 				</form>  
                 <center>
                 <a href="../listofbooks/userslogin/login.php"><input type="submit" value="Log Out" ></a>
-                    <a href="../listofbooks/showtables.php"><input type="submit" value="Show Borrowed Books"></a><br>
                     <a href="../listofbooks/userslogin/profile.php"><input type="submit" value="Profile"></a>
                 </center>
 	</div>
