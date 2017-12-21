@@ -2,16 +2,17 @@
 require_once 'config.php';
 
 if(isset($_POST['addbook'])){
-
+        $stud_id = $_POST['stud_id'];
         $booksname = $_POST['College'];
         $College = $_POST['booksname'];
         $Count = $_POST['Count'];
         $dateborrowed = $_POST['dateborrowed'];
         $datereturned = $_POST['datereturned'];
+
+        $sql="CALL addtobookslist('$stud_id','$College','$booksname',$Count,
+        '$dateborrowed','$datereturned')";
       
-        $sql = "INSERT INTO bookslist (College, booksname, Count, dateborrowed, datereturned)
-        VALUES ('$College', '$booksname', $Count, '$dateborrowed', '$datereturned')";
-       
+      
               if(mysqli_query($con, $sql)){
                    echo "<script>alert('New Record Created Successfully');</script>";
                   
@@ -36,7 +37,9 @@ if(isset($_POST['addbook'])){
             margin: 5px;
             border-radius: 5px;
            
-        }</style>
+        }
+        
+    </style>
 </head>
 <body>	
 
@@ -48,11 +51,19 @@ if(isset($_POST['addbook'])){
     <h3>University of Southeastern Philippines</h3>
     </center>
     <div id="main">
-    
+    </div>
 	<h2 align="center">ADD New Borrowed Books</h2>  <br><br><br>  
         <div>
         
-                <form action="create.php" method="POST">                                                                       <center>       
+                <form action="create.php" method="POST">
+                <center>  
+
+                <div class="form-group ">
+                <label>Student ID</label>
+                <input type="text" name="stud_id" class="form-control" value="">
+   <!--                  <?php echo $stud_id; ?>-->
+                </div><br> 
+
                 <div class="form-group ">
                 <label>College</label>
                 <input type="text" name="College" class="form-control" value="">
@@ -88,7 +99,8 @@ if(isset($_POST['addbook'])){
 				</form>  
                 <center>
                 <a href="../listofbooks/main/INDEX.php"><input type="submit" value="Log Out" ></a>
-                    <a href="../listofbooks/userprofile.php"><input type="submit" value="Profile"></a>
+                <a href="../listofbooks/listofbooks.php"><input type="submit" value="List Of Books Borrowed"></a>
+                <a href="../listofbooks/log.php"><input type="submit" value="View Log"></a>
                 </center>
 	</div>
 	
