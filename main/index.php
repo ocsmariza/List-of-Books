@@ -5,23 +5,27 @@
       
         <style>
     
+          
+            .header{
+            width: 70% fixed;
+            background-color: #660000;
+            margin-left: 15%;
+            margin-right: 15%;
+            border-radius: 10px;
             
-        div{
-                border-style: solid;
-               border-color: #660000;
-
-            }
-            .title{
-                 background-color: #660000;
-                
             }
             .footer{
-                background-color: #660000;
-                padding-bottom: 10px;
-                background-position: center;
-    
+            width: 70%;
+            background-color: #660000;
+            margin-left: 15%;
+            margin-right: 15%;
+            border-radius: 10px;
             }
-
+            .all{
+                border-style: double;
+            
+            }
+           
 	input[type=submit]{
     width: 15%;
     background-color: #660000;
@@ -29,6 +33,7 @@
     color: white;
     padding: 26px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
     </style>
@@ -36,16 +41,18 @@
     
 <body>	
 <center>
+    <div class="all">
+        
     <div class="header">
-        <div class="title">
-           <img src="../photos/usep.png" height=100 width=100  class="left" >
+        
+        <div class="position"><img src="../photos/usep.png" height=100 width=100  class="right" ></div>
         <h1 style="color:white">University of Southeastern Philippines</h1> 
     </div>
-        
+        <div class="title">
         <br><br><br><br><br><br><br>
         <form action="../create.php" method="get">
             <input type="submit" value="Add"></form>
-        
+    </div>
 		<br><br><br><br><br><br><br>
     
         
@@ -55,7 +62,7 @@
     <br>
         Website: www.usep.edu.ph<br></h5></p></center>
 	</div>
-</div>
+    </div>
     </body>
     </html>
  
