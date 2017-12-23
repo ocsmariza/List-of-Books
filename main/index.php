@@ -21,10 +21,13 @@
             margin-right: 15%;
             border-radius: 10px;
             }
-            .all{
-                border-style: double;
             
+            .border{
+                border-style: groove;
+                background-color: #b3e6b3;
+                border-radius: 6px;
             }
+            
            
 	input[type=submit]{
     width: 15%;
@@ -41,13 +44,13 @@
     
 <body>	
 <center>
-    <div class="all">
         
     <div class="header">
         
-        <div class="position"><img src="../photos/usep.png" height=100 width=100  class="right" ></div>
+        <div class="position"><img src="../photos/usep.png" height=80 width=80  class="right" >
         <h1 style="color:white">University of Southeastern Philippines</h1> 
-    </div>
+        </div>
+        <div class="border">
         <div class="title">
         <br><br><br><br><br><br><br>
         <form action="../create.php" method="get">
@@ -56,11 +59,11 @@
 		<br><br><br><br><br><br><br>
     
         
-
+</div>
     <div class="footer">
-	<p><h5 align="center" style="color:white">Bo. Obrero, Inigo Street Davao City
+	<h5 align="center" style="color:white">Bo. Obrero, Inigo Street Davao City
     <br>
-        Website: www.usep.edu.ph<br></h5></p></center>
+        Website: www.usep.edu.ph<br></h5></center>
 	</div>
     </div>
     </body>
