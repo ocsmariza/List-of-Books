@@ -24,7 +24,7 @@
             
             .border{
                 border-style: groove;
-                background-color: #b3e6b3;
+                background-color: #fcf7f7;
                 border-radius: 6px;
             }
             

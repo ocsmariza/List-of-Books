@@ -32,12 +32,7 @@ if(isset($_POST['addbook'])){
 <head>
     <title>Add New Borrowed</title>
     <style>
-      input[type=text]{
-           
-            margin: 5px;
-            border-radius: 5px;
-           
-        }
+      
         .header{
             width: 70%;
             background-color: #660000;
@@ -47,39 +42,44 @@ if(isset($_POST['addbook'])){
             
         }
     input[type=text]{
-    width: 10%;
+    margin: 5px;
+    width: 20%;
     background-color: #ffffff;
     padding: 10px;
     cursor: pointer;
     border-radius: 5px;
 }
         input[type=date]{
-            width: 10%;
+            width: 20%;
             background-color: #ffffff;
             padding: 10px;
             cursor: pointer;
             border-radius: 5px;
         }
         input[type=submit]{
-            width: 15%;
+            width: 18%;
             background-color: #660000;
             color: aliceblue;
             padding: 10px;
             cursor: pointer;
             border-radius: 5px;
+            
         }
-        .footer{
-            width: 70%;
-            background-color: #660000;
-            margin-left: 15%;
-            margin-right: 15%;
-            border-radius: 10px;
-            }
+        
         .border{
                 border-style: groove;
-                background-color: #b3e6b3;
+                background-color: #fcf7f7;
                 border-radius: 6px;
             }
+        .form-group{
+            padding-left: 150px;
+        }
+        .dates{
+            padding-left: 147px;
+        }
+        .add{
+            padding-left: 410px;
+        }
         
     </style>
 </head>
@@ -99,53 +99,57 @@ if(isset($_POST['addbook'])){
                     <div id="main">
                     <h2 align="center">ADD New Borrowed Books</h2>
                     <div>
-                <center>  
+            
                 <form action="create.php" method="POST">
                 <div class="form-group ">
-                <label>Student ID</label>
+                <label>Student ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                 <input type="text" name="stud_id" class="form-control" value="">
    <!--                  <?php echo $stud_id; ?>-->
 
-               
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <label>College</label>
                 <input type="text" name="College" class="form-control" value="">
-   <!--                  <?php echo $College; ?>-->
-                <br>
+   <!--                  <?php echo $College; ?>--><br>
                              
                 
                 <label>Books Name:</label>
-                <input type="text" name="booksname" class="form-control" value="">
+                &nbsp;<input type="text" name="booksname" class="form-control" value="">
   <!--                  <?php echo $booksname; ?>-->
     
-                
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <label>Count </label>
-                <input type="text" name="Count" class="form-control" value="">
-   <!--                 <?php echo $Count; ?>-->
-                <br>
-                
+                &nbsp;&nbsp;<input type="text" name="Count" class="form-control" value="">
+   <!--                 <?php echo $Count; ?>--><br>
+                </div>
+                    
+                <div class="dates">
                 <label>Date Borrowed</label>
                 <input type="date" name="dateborrowed" class="form-control" value="">
-    <!--                <?php echo $dateborrowed; ?>-->
+    <!--               <?php echo $dateborrowed; ?>-->
                 
-            
+                &nbsp;&nbsp;&nbsp;
                 <label>Date To Return</label>
                 <input type="date" name="datereturned" class="form-control" value="">
     <!--                <?php echo $datereturned; ?>-->
+                </div><br><br>
                     
-                <br>
-                <input type="submit" name="addbook" value="ADD NEW" ><br><br>     
+                <div class="add">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="submit" name="addbook" value="ADD NEW" ><br><br><br>   
                 </div>
-                </center>
+                
+                
 				</form>  
-                        </div>
-                    </div>
+                </div>
+                </div>
                 
 	</div>
         <div class="footer">
-	<p><h5 align="center" style="color:white">Bo. Obrero, Inigo Street Davao City
+	<h5 align="center" style="color:white">Bo. Obrero, Inigo Street Davao City
     <br>
-        Website: www.usep.edu.ph<br></h5></p></center>
+        Website: www.usep.edu.ph<br></h5>
 	</div>	
+    </center>
     </body>
     </html> 
 

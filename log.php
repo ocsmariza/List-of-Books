@@ -21,6 +21,25 @@ th{
     background-color: #660000;
     color: white;
 }
+            input[type=submit]{
+                width: 17%;
+                background-color: #660000;
+                color: #faecec;
+                padding: 10px;
+                cursor: pointer;
+                border-radius: 5px;
+                
+            }
+            .header{
+            background-color: #660000;
+            border-radius: 10px;
+            
+        }
+            input[type=text]{
+                width: 20%;
+                padding: 10px;
+
+            }
 
 
 tr:hover {background-color: #b3b3b3} 
@@ -33,15 +52,12 @@ tr:hover {background-color: #b3b3b3}
   <center>
     
  <img src="photos/usep.png" height=100 width=100  class="left">  
-
-    <h3>University of Southeastern Philippines</h3><br>
-    <h3>LOG<br>
-            <a href="../listofbooks/main/INDEX.php"><input type="submit" value="Log out" ></a></right>
-            </h3></h3>
-    <input type="text" id="myInput" onkeyup="searchTable()" placeholder="Search .." title="Type in a name">
- </center>
-    </body>
-    
+      <h1 style="color:white">University of Southeastern Philippines</h1></div>
+      <center><h2>LOG<br>
+            <a href="../listofbooks/main/INDEX.php"><input type="submit" value="Log out" >
+            <a href="../listofbooks/create.php"><input type="submit" value="back" ></a></right></h2>
+        <input type="text" id="myInput" onkeyup="searchTable()" placeholder="Search .." title="Type in a name"></center>
+</body>   
 </html>
 <?php
 session_start();
