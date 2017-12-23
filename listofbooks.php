@@ -39,7 +39,14 @@ tr:hover {background-color: #b3b3b3}
                 width: 20%;
                 padding: 10px;
 
+            }   
+            .footer{
+            background-color: #660000;
+            border-radius: 5px;
+                padding-bottom: 1px;
+                padding-top: 1px;
             }
+            
         
 </style> 
 </head>
@@ -58,6 +65,7 @@ tr:hover {background-color: #b3b3b3}
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <input type="text" id="myInput" onkeyup="searchTable()" placeholder="Search .." title="Type in a name">
  </center>
+    
     </body> 
 </html>
 <?php
@@ -124,6 +132,12 @@ function searchTable() {
     }
 }
 </script>
-
+<html>
+<body>
+    <div class="footer">
+	<h5 align="center" style="color:white">Bo. Obrero, Inigo Street Davao City
+    <br>
+        Website: www.usep.edu.ph<br></h5>
+	</div>	</body></html>
 
         

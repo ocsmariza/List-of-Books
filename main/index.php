@@ -20,6 +20,7 @@
             margin-left: 15%;
             margin-right: 15%;
             border-radius: 10px;
+                padding-bottom: 1px;
             }
             
             .border{

@@ -80,6 +80,12 @@ if(isset($_POST['addbook'])){
         .add{
             padding-left: 410px;
         }
+        .footer{
+            background-color: #660000;
+            border-radius: 5px;
+                padding-bottom: 1px;
+                padding-top: 1px;
+            }
         
     </style>
 </head>
@@ -134,7 +140,6 @@ if(isset($_POST['addbook'])){
                 </div><br><br>
                     
                 <div class="add">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <input type="submit" name="addbook" value="ADD NEW" ><br><br><br>   
                 </div>
                 
