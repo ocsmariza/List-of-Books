@@ -61,7 +61,7 @@ tr:hover {background-color: #b3b3b3}
       <h1 style="color:white">University of Southeastern Philippines</h1></div>
       <center><h2>LOG<br>
             <a href="../listofbooks/main/INDEX.php"><input type="submit" value="Log out" >
-            <a href="../listofbooks/create.php"><input type="submit" value="back" ></a></right></h2>
+            <a href="../listofbooks/admin.php"><input type="submit" value="back" ></a></right></h2>
         <input type="text" id="myInput" onkeyup="searchTable()" placeholder="Search .." title="Type in a name"></center>
 </body>   
 </html>

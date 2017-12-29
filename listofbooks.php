@@ -60,7 +60,7 @@ tr:hover {background-color: #b3b3b3}
       <h1 style="color:white">University of Southeastern Philippines</h1></div>
     <center><h2>Books Borrowed<br>
         <a href="../listofbooks/main/INDEX.php"><input type="submit" value="Log out" >
-        <a href="../listofbooks/create.php"><input type="submit" value="back" ></a></right>
+        <a href="../listofbooks/admin.php"><input type="submit" value="back" ></a></right>
             </h3></h2>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <input type="text" id="myInput" onkeyup="searchTable()" placeholder="Search .." title="Type in a name">
@@ -72,7 +72,7 @@ tr:hover {background-color: #b3b3b3}
 session_start();
 require_once 'config.php';
 
-$sql = "SELECT * FROM showbookslist";
+$sql = "SELECT * FROM showbooks";
 $result = mysqli_query($con, $sql);
 
 
@@ -84,11 +84,13 @@ mysqli_close($con);
 <thread>
     <tr id="tableHeader">
     <th>Book's Name</th>
+    <th>Student Name</th>
     <th>Student ID</th>
     <th>College</th>
     <th>No. of Books Borrowed</th>
     <th>Date Borrowed</th>
     <th>Date To Return</th>
+    <th>Status</th>
         
    
     </tr>
@@ -97,11 +99,13 @@ mysqli_close($con);
 <?php while($row = mysqli_fetch_assoc($result)) : ?>
         <tr>
             <td><?php echo $row['booksname']; ?></td>
+            <td><?php echo $row['Student_name']; ?></td>
             <td><?php echo $row['student_id']; ?></td>
             <td><?php echo $row['College']; ?></td>
             <td><?php echo $row['Count']; ?></td>
             <td><?php echo $row['date_borrowed']; ?></td>
             <td><?php echo $row['date_returned']; ?></td>
+            <td><?php echo $row['Status']; ?></td>
         </tr>
         <?php endwhile ?>
     </tbody>

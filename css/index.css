@@ -1,0 +1,46 @@
+.header {
+    position: fixed;
+    width: 70%;
+    background-color: #660000;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-radius: 10px;
+    font-family: "Century Gothic";
+}
+
+.logo {
+    position: relative;
+    top: 14px;   
+}
+
+.body{
+    height: 392px;
+    border-style: groove;
+    background-color: whitesmoke;
+    border-radius: 6px;
+    border: 1px solid #1d1d1d;
+}
+
+.footer{
+    width: 70%;
+    background-color: #660000;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-radius: 10px;
+    padding-bottom: 1px;
+}
+
+input[type=submit] {
+    width: 15%;
+    background-color: #660000;
+    font-size: 20px;
+    color: white;
+    padding: 26px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hover:link {color:transparent;}
+.hover:visited {color:transparent;}
+.hover:hover {color:transparent;}
+.hover:active {color:transparent;}

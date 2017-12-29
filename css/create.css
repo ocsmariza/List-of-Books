@@ -1,0 +1,150 @@
+.header {
+    position: fixed;
+    width: 70%;
+    background-color: #660000;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-radius: 10px;
+    font-family: "Century Gothic";
+}
+
+.logo {
+    position: relative;
+    top: 14px;   
+}
+
+.body{
+    height: 392px;
+    border-style: groove;
+    background-color: #fcf7f7;
+    border-radius: 6px;
+    border: 1px solid #1d1d1d;
+}
+
+.navigation {
+    position: relative;
+    top: 12px;
+}
+
+.studentid {
+    position: relative;
+    top: 0px;
+    left: -180px;
+}
+
+.inputid {
+    position: relative;
+    left: -130px;
+}
+
+.college {
+    position: relative;
+    top: -62px;
+    left: 74px;
+}
+
+.inputcollege {
+    position: relative;
+    top: -62px;
+    left: 132px;
+}
+
+.bookname {
+    position: relative;
+    top: -50px;
+    left: -173px;
+}
+
+.inputbook {
+    position: relative;
+    top: -50px;
+    left: -130px;
+}
+
+.count {
+    position: relative;
+    top: -112px;
+    left: 74px;
+}
+
+.inputcount {
+    position: relative;
+    top: -112px;
+    left: 132px;
+}
+
+.dateborrowed {
+    position: relative;
+    top: -103px;
+    left: -162px;
+}
+
+.inputborroweddate {
+    position: relative;
+    top: -103px;
+    left: -130px;
+}
+
+.datetoreturn {
+    position: relative;
+    top: -165px;
+    left: 100px;
+}
+
+.inputreturndate {
+    position: relative;
+    top: -165px;
+    left: 133px;
+}
+
+.add {
+    position: relative;
+    top: -150px;
+}
+
+.footer{
+    width: 70%;
+    background-color: #660000;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-radius: 10px;
+    padding-bottom: 1px;
+}
+
+input[type=text] {
+    width: 20%;
+    background-color: #ffffff;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+        
+input[type=date] {
+    width: 20%;
+    background-color: #ffffff;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+input[type=submit] {
+    width: 18%;
+    background-color: #660000;
+    color: aliceblue;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hover:link {color:transparent;}
+.hover:visited {color:transparent;}
+.hover:hover {color:transparent;}
+.hover:active {color:transparent;}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #7f8c8d;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border: solid #bdc3c7 2px;
+}
