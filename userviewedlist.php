@@ -53,40 +53,28 @@ tr:hover {background-color: #b3b3b3}
 <body>	
 
 <div class="header">
+  <center>
+    
+ <img src="photos/usep.png" height=100 width=100  class="left">  
 
- 
-
+      <h1 style="color:white">University of Southeastern Philippines</h1></div>
+    <center><h2>Books Borrowed<br>
+        <a href="../listofbooks/main/INDEX.php"><input type="submit" value="Log out" >
+        <a href="../listofbooks/create.php"><input type="submit" value="back" ></a></right>
+            </h3></h2>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" id="myInput" onkeyup="searchTable()" placeholder="Search .." title="Type in a name">
+ </center>
+    
+    </body> 
+</html>
 <?php
 session_start();
 require_once 'config.php';
 
-$status = "All";
-$college = "All";
-
-$mainsql = "SELECT * FROM showbooks";
-
-if(isset($_POST['searchbtn'])){
-
-    $college = $_POST['searchcollege'];
-    $status = $_POST['searchstatus'];
-
-    if($status == 'All' && $college == 'All'){
-        $mainsql = "SELECT * FROM bookslist";
-    }else if($status == 'All' && $college != 'All'){
-        $mainsql = "SELECT * FROM bookslist WHERE College = '$college'";
-    }else if($status == 'Not Returned' && $college == 'All'){
-        $mainsql = "SELECT * FROM bookslist WHERE STATUS = 'Not Returned'";
-    }else if ($status == 'Not Returned' && $college != 'All') {
-        $mainsql = "SELECT * FROM bookslist WHERE STATUS = 'Not Returned' && College = '$college'";
-    }elseif ($status == 'Returned' && $college == 'All') {
-        $mainsql = "SELECT * FROM bookslist WHERE STATUS = 'Returned'";
-    }elseif ($status == 'Returned' && $college != 'All') {
-        $mainsql = "SELECT * FROM bookslist WHERE STATUS = 'Returned' && College = '$college'";
-    }
-}
-
 $action = '';
-$result = mysqli_query($con, $mainsql);
+$sql = "SELECT * FROM showbooks";
+$result = mysqli_query($con, $sql);
 $where = '';
 
 if(isset($_GET["id"]))
@@ -138,53 +126,13 @@ if(isset($_GET["id"]))
     }
 
         $where = " ORDER BY  $id $action ";
-        $sql = $mainsql . $where;
+        $sql = "SELECT * FROM showbooks " . $where;
         $result = mysqli_query($con, $sql);
     }
 
 mysqli_close($con);
     
 ?>
-
-<center>
-    
- <img src="photos/usep.png" height=100 width=100  class="left">  
-
-      <h1 style="color:white">University of Southeastern Philippines</h1></div>
-    <center><h2>Books Borrowed<br>
-        <a href="../listofbooks/main/INDEX.php"><input type="submit" value="Log out" >
-        <a href="../listofbooks/admin.php"><input type="submit" value="back" ></a></right>
-            </h3></h2>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-
-    <input type="text" id="myInput" onkeyup="searchTable()" placeholder="Search .." title="Type in a name">
- </center>
-
-<form action="listofbooks.php" method="post">
-    <label>Select the Status to Search: </label>
-    <select name="searchstatus">
-        <option value="<?php echo $status; ?>" ><?php echo $status; ?></option>
-        <option value="All">All</option>
-        <option value="Not Returned">Not Returned</option>
-        <option value="Returned">Returned</option>
-    </select><br>
-    <label>Select a College to Search: </label>
-    <select name="searchcollege">
-        <option value="<?php echo $college; ?>"><?php echo $college; ?></option>
-        <option value="All">All</option>
-        <option value="Institute of Computing">Institute of Computing</option>
-        <option value="College of Engineering">College of Engineering</option>
-        <option value="College of Education">College of Education</option>
-        <option value="College of Technology">College of Technology</option>
-        <option value="College of Art and Sciences">College of Art and Sciences</option>
-        <option value="College of Governance and Business">College of Governance and Business</option>
-        <option value="School of Applied Economics">School of Applied Economics</option>
-    </select><br><br>
-    <input type="submit" name="searchbtn" value="Search">
- </form>
-
-
 <br>
 <table id="myTable">
 <thread>
@@ -205,8 +153,7 @@ mysqli_close($con);
     </thread>
     <tbody>
 <?php while($row = mysqli_fetch_assoc($result)) : ?>
-    
-            <tr>
+        <tr>
             
             <td><?php echo $row['Student_name']; ?></td>
             <td><?php echo $row['student_id']; ?></td>
@@ -216,9 +163,8 @@ mysqli_close($con);
             <td><?php echo $row['date_borrowed']; ?></td>
             <td><?php echo $row['date_returned']; ?></td>
             <td><?php echo $row['Status']; ?></td>
-            <td><a href='admineditviewedlist.php'id']}'>EDIT</a></td>
-
-            </tr>
+            <td><a href='usereditviewedlist.php?id={$row['id']}'>EDIT</a></td>
+        </tr>
         <?php endwhile ?>
     </tbody>
 </table>
@@ -248,13 +194,12 @@ function searchTable() {
     }
 }
 </script>
-
+<html>
+<body>
     <div class="footer">
 	<h5 align="center" style="color:white">Bo. Obrero, Inigo Street Davao City
     <br>
         Website: www.usep.edu.ph<br></h5>
-	</div>
-</body>
-</html>
+	</div>	</body></html>
 
         

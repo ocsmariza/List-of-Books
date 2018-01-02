@@ -2,17 +2,18 @@
     require_once 'config.php';
 
     if(isset($_POST['addbook'])) {
-        $booksname = $_POST['booksname'];
+       
         $Student_name = $_POST['Student_name'];
         $student_id = $_POST['student_id'];
         $College = $_POST['College'];
+        $booksname = $_POST['booksname'];
         $Count = $_POST['Count'];
         $dateborrowed = $_POST['dateborrowed'];
         $datereturned = $_POST['datereturned'];
+        $status = "Not Returned";
        
 
-        $sql="CALL addtobookslist('$booksname', '$Student_name', '$student_id','$College',$Count,
-        '$dateborrowed','$datereturned')";
+        $sql="CALL addtobookslist('$Student_name','$student_id','$College','$booksname',$Count,'$dateborrowed','$datereturned','$status')";
             if(mysqli_query($con, $sql)) { 
                 echo "<script>alert('New Record Created Successfully');</script>";
                   
@@ -40,6 +41,13 @@
                 cursor: pointer;
                 border-radius: 5px;
             }
+            input[type=number]{
+                width: 20%;
+                background-color: #ffffff;
+                padding: 10px;
+                cursor: pointer;
+                border-radius: 5px;
+            }
         </style>
     </head>
     
@@ -55,8 +63,11 @@
                 <div class="body">
                     <center>
                         <div class="navigation">
-    
-                        <a href="../listofbooks/main/INDEX.php" style="text-decoration:none">
+                            <a href="../listofbooks/userviewedlist.php">
+                            <input type="submit" value="List of Borrowed Books">
+                        <a href="../listofbooks/userlog.php">
+                            <input type="submit" value="View Log">
+                        <a href="../listofbooks/main/INDEX.php">
                             <input type="submit" value="Log Out" >
                         </a>
                         </div>
@@ -101,7 +112,7 @@
                                         <label>Count </label>&nbsp;&nbsp;
                                     </div>
                                     <div class="inputcount">
-                                        <input type="text" name="Count" class="form-control" value="">
+                                        <input type="number" name="Count" class="form-control" value="">
    <!--                                 <?php echo $Count; ?>-->
                                     </div>
                                               

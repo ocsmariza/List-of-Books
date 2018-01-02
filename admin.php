@@ -50,7 +50,7 @@
                 </div>
             <h1 style="color:white">University of Southeastern Philippines</h1></div>
             <div class="body"><br><br>
-            <a href="../admin/inventory.php">
+            <a href="../listofbooks/inventory.php">
                 <input type="submit" value="Inventory"></a><br><br>
             <a href="listofbooks.php">
                 <input type="submit" value="List of Borrowed Books"></a><br><br>

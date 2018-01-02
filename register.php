@@ -58,7 +58,7 @@ if(empty($username_u) && empty($password_u) && empty($confirm_password_u)){
 
         
             if(mysqli_stmt_execute($stmt)){
-                header("location: ../main/index.php");
+                header("location: ../listofbooks/register.php");
             } else{
                 echo "Something went wrong. Please try again later.";
             }
